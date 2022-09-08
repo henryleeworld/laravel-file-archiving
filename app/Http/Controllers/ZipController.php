@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use File;
-use ZipArchive;
+use Illuminate\Http\Request;
 use RuntimeException;
+use ZipArchive;
 
 class ZipController extends Controller
 {
@@ -18,7 +18,7 @@ class ZipController extends Controller
     {
         $zip = new ZipArchive;
         $fileName = 'archive.zip';
-		$filePath = public_path($fileName);
+		$filePath = storage_path($fileName);
 		
 		if (file_exists($filePath)) {
             unlink($filePath);
@@ -28,7 +28,7 @@ class ZipController extends Controller
             throw new RuntimeException(sprintf('Failed to create zip archive. (Status code: %s)', $zipStatus));
         }
 
-        $files = File::files(public_path('uploads'));
+        $files = File::files(storage_path('uploads'));
         foreach ($files as $key => $value) {
             if (!$zip->addFile($value, basename($value))) {
                 throw new RuntimeException(sprintf('Add file failed: %s', $value));
