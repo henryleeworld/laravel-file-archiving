@@ -1,4 +1,4 @@
-# Laravel 9 檔案壓縮
+# Laravel 10 檔案壓縮
 
 壓縮的檔案所佔用的儲存空間較少，而且傳輸到其他電腦的速度會比未壓縮的檔案快很多。理論上，這種格式允許對不同的文件使用不同的演算法。不管用何種方法，這種格式的一個缺點是壓縮很多小文件時，檔案大小明顯的比壓縮成一個獨立的文件要大。
 
@@ -20,8 +20,8 @@ $ php artisan key:generate
 - 你可以經由 `/zip/download/` 來進行壓縮檔案下載。
 ----
 ## 畫面截圖
-![](https://i.imgur.com/z5OwxRM.png)
+![](https://i.imgur.com/xm967gj.png)
 > 將資料夾的內容壓縮至壓縮檔案
 
-![](https://i.imgur.com/vnTfl0k.png)
+![](https://i.imgur.com/F8skJJi.png)
 > 壓縮比可藉由犧牲重建資料的品質來提升
