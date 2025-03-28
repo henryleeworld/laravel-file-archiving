@@ -1,4 +1,4 @@
-# Laravel 11 檔案壓縮
+# Laravel 12 檔案壓縮
 
 壓縮的檔案所佔用的儲存空間較少，而且傳輸到其他電腦的速度會比未壓縮的檔案快很多。理論上，這種格式允許對不同的文件使用不同的演算法。不管用何種方法，這種格式的一個缺點是壓縮很多小文件時，檔案大小明顯的比壓縮成一個獨立的文件要大。
 
@@ -17,12 +17,16 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/zip/download/` 來進行壓縮檔案下載。
 ----
 ## 畫面截圖
-![](https://i.imgur.com/S9jwfge.png)
+![](https://i.imgur.com/jvH1NYw.png)
 > 將資料夾的內容壓縮至壓縮檔案
 
-![](https://i.imgur.com/VCYNJya.png)
+![](https://i.imgur.com/yBJWTBM.png)
 > 壓縮比可藉由犧牲重建資料的品質來提升
